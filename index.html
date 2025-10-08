@@ -19,7 +19,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
         }
         
         .container {
@@ -28,44 +28,37 @@
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
+            margin-top: 10px;
         }
         
         h1 {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .description {
-            text-align: center;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-        
         .input-section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .input-section h2 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
             display: flex;
             align-items: center;
         }
         
         .input-section h2 i {
-            margin-right: 10px;
+            margin-right: 8px;
         }
         
         textarea {
             width: 100%;
-            height: 150px;
-            padding: 15px;
+            height: 120px;
+            padding: 12px;
             border: none;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -82,18 +75,18 @@
         
         .buttons {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 10px;
+            margin-top: 12px;
         }
         
         button {
             flex: 1;
-            padding: 12px 20px;
+            padding: 10px 15px;
             border: none;
             border-radius: 8px;
             background-color: #4a00e0;
             color: white;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -129,9 +122,9 @@
         
         .notification {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 25px;
+            top: 15px;
+            right: 15px;
+            padding: 12px 20px;
             background-color: #00b894;
             color: white;
             border-radius: 8px;
@@ -139,6 +132,7 @@
             transform: translateX(150%);
             transition: transform 0.3s ease;
             z-index: 1000;
+            font-size: 0.9rem;
         }
         
         .notification.show {
@@ -147,15 +141,48 @@
         
         @media (max-width: 600px) {
             .container {
-                padding: 20px;
+                padding: 15px;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
+                margin-bottom: 15px;
             }
             
             .buttons {
                 flex-direction: column;
+            }
+            
+            textarea {
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 12px;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            .input-section h2 {
+                font-size: 1.1rem;
+            }
+            
+            textarea {
+                height: 90px;
+                padding: 10px;
+            }
+            
+            button {
+                padding: 8px 12px;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -163,11 +190,6 @@
 <body>
     <div class="container">
         <h1>Шифратор текста</h1>
-        
-        <p class="description">
-            Этот инструмент позволяет зашифровать ваш текст для безопасной передачи и расшифровать его обратно.
-            Работает с русским и английским текстом, а также с любыми другими символами.
-        </p>
         
         <div class="input-section">
             <h2><i>🔒</i> Шифрование</h2>
